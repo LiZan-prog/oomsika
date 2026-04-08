@@ -8,8 +8,10 @@ export default function Home() {
         <h1 className="text-xl font-bold">Oomsika</h1>
         <div className="space-x-4">
           <Login/>
-          <Signup/>
         </div>
+          <div className="space-x-4">
+            <Signup/>
+          </div>
       </header>
       <main className="flex-grow p-4">
         <p>Welcome to Oomsika! Please login or sign up to continue.</p>

@@ -1,6 +1,25 @@
 import Link from "next/link";
+import { motion } from "framer-motion";
 import HeroCarousel from "../components/HeroCarousel";
 import Navbar from "../components/Navbar";
+
+const fadeInUp = {
+  initial: { opacity: 0, y: 60 },
+  whileInView: { opacity: 1, y: 0 },
+  transition: { duration: 0.6 },
+};
+
+const slideFromLeft = {
+  initial: { opacity: 0, x: -100 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+};
+
+const slideFromRight = {
+  initial: { opacity: 0, x: 100 },
+  whileInView: { opacity: 1, x: 0 },
+  transition: { duration: 0.8 },
+};
 
 export default function Home() {
   return (
@@ -57,7 +76,7 @@ export default function Home() {
         </section>
 
         <section className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div className="space-y-6">
+          <motion.div className="space-y-6" {...slideFromLeft}>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Discover Your Perfect Home
             </h2>
@@ -78,25 +97,25 @@ export default function Home() {
                 <span>Direct communication with trusted hosts</span>
               </li>
             </ul>
-          </div>
-          <div className="relative">
+          </motion.div>
+          <motion.div className="relative" {...slideFromRight}>
             <img
               src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80"
               alt="Beautiful modern home interior"
               className="h-96 w-full rounded-3xl object-cover shadow-2xl shadow-black/20"
             />
-          </div>
+          </motion.div>
         </section>
 
         <section className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
-          <div className="relative order-2 lg:order-1">
+          <motion.div className="relative order-2 lg:order-1" {...slideFromLeft}>
             <img
               src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
               alt="Cozy lodge in nature"
               className="h-96 w-full rounded-3xl object-cover shadow-2xl shadow-black/20"
             />
-          </div>
-          <div className="space-y-6 order-1 lg:order-2">
+          </motion.div>
+          <motion.div className="space-y-6 order-1 lg:order-2" {...slideFromRight}>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Escape to Scenic Lodges
             </h2>
@@ -117,11 +136,11 @@ export default function Home() {
                 <span>Flexible booking options for any duration</span>
               </li>
             </ul>
-          </div>
+          </motion.div>
         </section>
 
         <section className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
-          <div className="space-y-6">
+          <motion.div className="space-y-6" {...slideFromLeft}>
             <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
               Luxury Hotel Experiences
             </h2>
@@ -142,17 +161,17 @@ export default function Home() {
                 <span>Exclusive deals and member benefits</span>
               </li>
             </ul>
-          </div>
-          <div className="relative">
+          </motion.div>
+          <motion.div className="relative" {...slideFromRight}>
             <img
               src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
               alt="Luxurious hotel room"
               className="h-96 w-full rounded-3xl object-cover shadow-2xl shadow-black/20"
             />
-          </div>
+          </motion.div>
         </section>
 
-        <section className="rounded-3xl bg-white/5 px-8 py-12 text-center sm:px-12">
+        <motion.section className="rounded-3xl bg-white/5 px-8 py-12 text-center sm:px-12" {...fadeInUp}>
           <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
             Ready to Find Your Perfect Stay?
           </h2>
@@ -173,7 +192,7 @@ export default function Home() {
               List Your Property
             </Link>
           </div>
-        </section>
+        </motion.section>
       </main>
 
       <footer className="bg-slate-950 border-t border-white/10 py-8 text-center">

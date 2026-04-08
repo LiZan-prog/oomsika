@@ -1,3 +1,5 @@
+'use client';
+
 
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { User, Mail, Phone, Briefcase, Lock } from 'lucide-react';

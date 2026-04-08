@@ -55,7 +55,130 @@ export default function Home() {
 
           <HeroCarousel />
         </section>
+
+        <section className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Discover Your Perfect Home
+            </h2>
+            <p className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+              Browse through our curated collection of homes. From cozy apartments to spacious houses, find the ideal place that fits your lifestyle and budget with just a few clicks.
+            </p>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Verified listings with detailed photos and descriptions</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Easy filtering by location, price, and amenities</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Direct communication with trusted hosts</span>
+              </li>
+            </ul>
+          </div>
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1564013799919-ab600027ffc6?auto=format&fit=crop&w=800&q=80"
+              alt="Beautiful modern home interior"
+              className="h-96 w-full rounded-3xl object-cover shadow-2xl shadow-black/20"
+            />
+          </div>
+        </section>
+
+        <section className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">
+          <div className="relative order-2 lg:order-1">
+            <img
+              src="https://images.unsplash.com/photo-1571896349842-33c89424de2d?auto=format&fit=crop&w=800&q=80"
+              alt="Cozy lodge in nature"
+              className="h-96 w-full rounded-3xl object-cover shadow-2xl shadow-black/20"
+            />
+          </div>
+          <div className="space-y-6 order-1 lg:order-2">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Escape to Scenic Lodges
+            </h2>
+            <p className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+              Experience nature's beauty in our handpicked lodges. Perfect for weekend getaways or extended stays, with all the comforts of home surrounded by stunning landscapes.
+            </p>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Secluded locations with breathtaking views</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Fully equipped with modern amenities</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Flexible booking options for any duration</span>
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
+          <div className="space-y-6">
+            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+              Luxury Hotel Experiences
+            </h2>
+            <p className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+              Indulge in world-class hospitality at our partner hotels. Whether for business or leisure, enjoy premium services and exceptional comfort in prime locations.
+            </p>
+            <ul className="space-y-3 text-slate-300">
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>High-end amenities and concierge services</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Central locations with easy access to attractions</span>
+              </li>
+              <li className="flex items-center gap-3">
+                <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
+                <span>Exclusive deals and member benefits</span>
+              </li>
+            </ul>
+          </div>
+          <div className="relative">
+            <img
+              src="https://images.unsplash.com/photo-1566073771259-6a8506099945?auto=format&fit=crop&w=800&q=80"
+              alt="Luxurious hotel room"
+              className="h-96 w-full rounded-3xl object-cover shadow-2xl shadow-black/20"
+            />
+          </div>
+        </section>
+
+        <section className="rounded-3xl bg-white/5 px-8 py-12 text-center sm:px-12">
+          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            Ready to Find Your Perfect Stay?
+          </h2>
+          <p className="mt-4 max-w-2xl mx-auto text-base leading-8 text-slate-300 sm:text-lg">
+            Join thousands of satisfied renters who have found their ideal homes, lodges, and hotels through Oomsika. Start your search today and experience the convenience of modern property finding.
+          </p>
+          <div className="mt-8 flex flex-wrap justify-center gap-4">
+            <Link
+              href="/signup"
+              className="inline-flex items-center justify-center rounded-full bg-emerald-400 px-8 py-4 text-sm font-semibold text-slate-950 transition hover:bg-emerald-300"
+            >
+              Get Started Free
+            </Link>
+            <Link
+              href="/list-property"
+              className="inline-flex items-center justify-center rounded-full border border-white/10 px-8 py-4 text-sm font-semibold text-white transition hover:border-emerald-300 hover:text-emerald-200"
+            >
+              List Your Property
+            </Link>
+          </div>
+        </section>
       </main>
+
+      <footer className="bg-slate-950 border-t border-white/10 py-8 text-center">
+        <p className="text-slate-400">&copy; 2024 Oomsika. All rights reserved.</p>
+      </footer>
     </div>
   );
 }

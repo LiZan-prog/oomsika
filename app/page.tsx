@@ -1,3 +1,4 @@
+import { Link } from "lucide-react";
 import Login from "./login/page";
 import Signup from "./signup/page";
 
@@ -7,11 +8,11 @@ export default function Home() {
       <header className="bg-white p-4 flex justify-between items-center border-b">
         <h1 className="text-xl font-bold">Oomsika</h1>
         <div className="space-x-4">
-          <Login/>
+          <Link href="/login">Login</Link>
         </div>
-          <div className="space-x-4">
-            <Signup/>
-          </div>
+        <div className="space-x-4">
+          <Link href="/signup">Sign Up</Link>
+        </div>
       </header>
       <main className="flex-grow p-4">
         <p>Welcome to Oomsika! Please login or sign up to continue.</p>

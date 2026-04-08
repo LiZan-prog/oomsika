@@ -10,6 +10,9 @@ export default function Home() {
       <header className="bg-white p-4 flex justify-between items-center border-b">
         <h1 className="text-xl font-bold">Oomsika</h1>
         <div className="space-x-4 flex">
+          <Link href="/list-property" className="bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 font-semibold">
+            List Your Property
+          </Link>
           <Link href="/login" className="text-blue-600 font-semibold hover:underline">
             Login
           </Link>

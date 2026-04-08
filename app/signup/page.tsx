@@ -2,7 +2,6 @@
 
 import { useState, ChangeEvent, FormEvent } from 'react';
 import { User, Mail, Phone, Lock } from 'lucide-react';
-import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 
 /** Form data type */
@@ -48,35 +47,39 @@ export default function SignUp() {
 
     setIsSubmitting(true);
 
-    const { error } = await supabase.auth.signUp(
-      {
-        email: formData.email,
-        password: formData.password,
-        options: {
-          data: {
-            name: formData.name,
-            phone_number: formData.phoneNumber,
-          },
-        },
-      },
-      
-    );
+    try {
+      const res = await fetch('/api/auth/signup', {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          email: formData.email,
+          password: formData.password,
+          name: formData.name,
+          phoneNumber: formData.phoneNumber,
+        }),
+      });
 
-    setIsSubmitting(false);
+      const data = await res.json();
 
-    if (error) {
-      setError(error.message || 'Failed to create account. Please try again.');
-      return;
+      if (!res.ok) {
+        setError(data.error || 'Failed to create account. Please try again.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      setSuccess('Account created! You can now log in.');
+      setFormData({
+        name: '',
+        email: '',
+        phoneNumber: '',
+        password: '',
+        confirmPassword: '',
+      });
+    } catch (err) {
+      setError('An error occurred. Please try again.');
     }
 
-    setSuccess('Account created! Check your email to confirm your signup.');
-    setFormData({
-      name: '',
-      email: '',
-      phoneNumber: '',
-      password: '',
-      confirmPassword: '',
-    });
+    setIsSubmitting(false);
   };
 
   const fields: Array<{

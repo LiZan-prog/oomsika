@@ -79,7 +79,21 @@ export default function Navbar({ activePath }: NavbarProps) {
 
           <Link
             href="/login"
-            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm shadow-slate-900/5 transition hover:border-slate-300 hover:text-slate-900"
+            className="hidden text-sm font-medium text-slate-600 hover:text-slate-900 md:inline-flex"
+          >
+            Login
+          </Link>
+
+          <Link
+            href="/signup"
+            className="hidden rounded-full border border-slate-200 bg-white px-4 py-2 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900 md:inline-flex"
+          >
+            Sign Up
+          </Link>
+
+          <Link
+            href="/login"
+            className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-slate-200 bg-white text-slate-700 shadow-sm shadow-slate-900/5 transition hover:border-slate-300 hover:text-slate-900 md:hidden"
             aria-label="User profile"
           >
             <UserCircle size={24} />
@@ -138,7 +152,14 @@ export default function Navbar({ activePath }: NavbarProps) {
               className="flex items-center justify-center gap-2 rounded-full border border-slate-200 bg-white px-4 py-3 text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900"
             >
               <UserCircle size={18} />
-              Profile
+              Login
+            </Link>
+            <Link
+              href="/signup"
+              onClick={() => setMobileOpen(false)}
+              className="block rounded-full border border-slate-200 bg-white px-4 py-3 text-center text-sm font-semibold text-slate-700 transition hover:border-slate-300 hover:text-slate-900"
+            >
+              Sign Up
             </Link>
           </div>
         </div>

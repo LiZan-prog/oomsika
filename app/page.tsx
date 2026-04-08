@@ -1,25 +1,11 @@
 import Link from "next/link";
 import HeroCarousel from "../components/HeroCarousel";
+import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
     <div className="min-h-screen bg-slate-950 text-white">
-      <header className="border-b border-white/10 bg-slate-950/90 backdrop-blur-md">
-        <div className="mx-auto flex max-w-7xl items-center justify-between px-4 py-5 sm:px-6">
-          <h1 className="text-xl font-semibold tracking-tight">Oomsika</h1>
-          <nav className="flex items-center gap-5 text-sm font-medium text-slate-200">
-            <Link href="/list-property" className="text-white hover:text-emerald-300">
-              List Your Property
-            </Link>
-            <Link href="/login" className="text-slate-300 hover:text-white">
-              Login
-            </Link>
-            <Link href="/signup" className="rounded-full border border-white/10 bg-white/10 px-4 py-2 text-white transition hover:border-emerald-300 hover:bg-emerald-500/15 hover:text-emerald-200">
-              Sign Up
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <Navbar />
 
       <main className="mx-auto flex max-w-7xl flex-col gap-16 px-4 py-12 sm:px-6 lg:px-8">
         <section className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr] lg:gap-16">

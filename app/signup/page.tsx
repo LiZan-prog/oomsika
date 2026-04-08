@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, ChangeEvent, FormEvent } from 'react';
+import { useRouter } from 'next/navigation';
 import { User, Mail, Phone, Lock } from 'lucide-react';
+import { supabase } from '@/lib/supabase';
 import Link from 'next/link';
 
 /** Form data type */
@@ -14,6 +16,7 @@ type FormData = {
 };
 
 export default function SignUp() {
+  const router = useRouter();
   const [formData, setFormData] = useState<FormData>({
     name: '',
     email: '',
@@ -67,14 +70,20 @@ export default function SignUp() {
         return;
       }
 
-      setSuccess('Account created! You can now log in.');
-      setFormData({
-        name: '',
-        email: '',
-        phoneNumber: '',
-        password: '',
-        confirmPassword: '',
+      const { error: signInError } = await supabase.auth.signInWithPassword({
+        email: formData.email,
+        password: formData.password,
       });
+
+      if (signInError) {
+        setError(signInError.message || 'Account created, but login failed. Please sign in manually.');
+        setIsSubmitting(false);
+        return;
+      }
+
+      setSuccess('Account created! Redirecting to your dashboard...');
+      router.push('/dashboard');
+      return;
     } catch (err) {
       setError('An error occurred. Please try again.');
     }

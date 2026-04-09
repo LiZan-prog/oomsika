@@ -32,12 +32,14 @@ export default function Navbar({ activePath }: NavbarProps) {
   }, [activePath]);
 
   useEffect(() => {
-    const theme = localStorage.getItem('theme');
-    if (theme === 'dark') {
-      setIsDark(true);
+    const storedTheme = localStorage.getItem('theme');
+    const prefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
+    const shouldUseDark = storedTheme === 'dark' || (!storedTheme && prefersDark);
+
+    setIsDark(shouldUseDark);
+    if (shouldUseDark) {
       document.documentElement.classList.add('dark');
     } else {
-      setIsDark(false);
       document.documentElement.classList.remove('dark');
     }
   }, []);
@@ -64,7 +66,7 @@ export default function Navbar({ activePath }: NavbarProps) {
             <span className="text-base font-semibold">O</span>
           </div>
           <div>
-            <Link href="/" className="text-lg font-semibold tracking-tight text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-300">
+            <Link href="/" className="font-quicksand text-2xl sm:text-3xl font-semibold tracking-tight text-slate-900 dark:text-white hover:text-slate-700 dark:hover:text-slate-300">
               Oomsika
             </Link>
             <p className="text-xs font-medium uppercase tracking-[0.24em] text-slate-500 dark:text-slate-400">Property Marketplace</p>

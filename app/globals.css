@@ -1,16 +1,22 @@
 @import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@400;500;600;700&display=swap");
 
 :root {
   --background: #ededed;
   --foreground: #0a0a0a;
 
   --font-inter: "Inter", sans-serif;
+  --font-logo: "Quicksand", sans-serif;
   --font-geist-mono: "Geist Mono", monospace;
 }
 
 .dark {
   --background: #0a0a0a;
   --foreground: #ededed;
+}
+
+.font-quicksand {
+  font-family: var(--font-logo);
 }
 
 @theme inline {

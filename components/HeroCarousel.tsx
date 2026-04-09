@@ -49,7 +49,7 @@ export default function HeroCarousel() {
   };
 
   return (
-    <section className="relative overflow-hidden rounded-[32px] border border-white/10 shadow-2xl shadow-black/20 bg-slate-900/50">
+    <section className="relative overflow-hidden rounded-[32px] border border-gray-300 dark:border-white/10 shadow-2xl shadow-black/20 bg-white/50 dark:bg-slate-900/50">
       <div className="relative aspect-[4/3] sm:aspect-[16/10]">
         {slides.map((slide, index) => (
           <div
@@ -66,13 +66,13 @@ export default function HeroCarousel() {
               alt={slide.title}
               className="h-full w-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-slate-950/90 via-slate-950/30 to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 text-white">
-              <p className="text-sm uppercase tracking-[0.24em] text-slate-300">Featured stay</p>
+            <div className="absolute inset-0 bg-gradient-to-t from-black/90 dark:from-slate-950/90 via-black/30 dark:via-slate-950/30 to-transparent" />
+            <div className="absolute bottom-6 left-6 right-6 text-black dark:text-white">
+              <p className="text-sm uppercase tracking-[0.24em] text-gray-600 dark:text-slate-300">Featured stay</p>
               <h2 className="mt-3 text-3xl font-semibold leading-tight sm:text-4xl">
                 {slide.title}
               </h2>
-              <p className="mt-2 max-w-xl text-sm text-slate-200 sm:text-base">
+              <p className="mt-2 max-w-xl text-sm text-gray-700 dark:text-slate-200 sm:text-base">
                 {slide.description}
               </p>
             </div>
@@ -89,7 +89,7 @@ export default function HeroCarousel() {
               aria-label={`Show slide ${index + 1}`}
               onClick={() => setActiveIndex(index)}
               className={`h-2.5 w-10 rounded-full transition-all duration-300 ${
-                index === activeIndex ? 'bg-white' : 'bg-white/30 hover:bg-white/70'
+                index === activeIndex ? 'bg-black dark:bg-white' : 'bg-black/30 dark:bg-white/30 hover:bg-black/70 dark:hover:bg-white/70'
               }`}
             />
           ))}
@@ -99,14 +99,14 @@ export default function HeroCarousel() {
           <button
             type="button"
             onClick={handlePrev}
-            className="rounded-full border border-white/20 bg-slate-950/70 px-3 py-2 text-sm font-semibold text-white transition hover:bg-slate-900"
+            className="rounded-full border border-gray-300 dark:border-white/20 bg-white dark:bg-slate-950/70 px-3 py-2 text-sm font-semibold text-black dark:text-white transition hover:bg-gray-100 dark:hover:bg-slate-900"
           >
             Prev
           </button>
           <button
             type="button"
             onClick={handleNext}
-            className="rounded-full border border-white/20 bg-white px-3 py-2 text-sm font-semibold text-slate-950 transition hover:bg-slate-100"
+            className="rounded-full border border-gray-300 dark:border-white/20 bg-black dark:bg-white px-3 py-2 text-sm font-semibold text-white dark:text-slate-950 transition hover:bg-gray-800 dark:hover:bg-slate-100"
           >
             Next
           </button>

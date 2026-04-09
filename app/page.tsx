@@ -25,7 +25,7 @@ const slideFromRight = {
 
 export default function Home() {
   return (
-    <div className="min-h-screen bg-slate-950 text-white">
+    <div className="min-h-screen bg-white text-black dark:bg-slate-950 dark:text-white">
       <Navbar />
 
       <main className="mx-auto flex max-w-7xl flex-col gap-16 px-4 py-12 sm:px-6 lg:px-8">
@@ -35,10 +35,10 @@ export default function Home() {
               Book safe, beautiful stays
             </span>
             <div className="space-y-5">
-              <h1 className="text-4xl font-bold tracking-tight text-white sm:text-5xl">
+              <h1 className="text-4xl font-bold tracking-tight text-black dark:text-white sm:text-5xl">
                 Find your next home, room, or shared space with confidence.
               </h1>
-              <p className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+              <p className="max-w-xl text-base leading-8 text-gray-600 dark:text-slate-300 sm:text-lg">
                 Oomsika helps renters and hosts connect through curated properties, trusted neighbourhoods, and a seamless listing experience.
               </p>
             </div>
@@ -52,24 +52,24 @@ export default function Home() {
               </Link>
               <Link
                 href="/signup"
-                className="inline-flex items-center justify-center rounded-full border border-white/10 px-6 py-3 text-sm font-semibold text-white transition hover:border-emerald-300 hover:text-emerald-200"
+                className="inline-flex items-center justify-center rounded-full border border-gray-300 dark:border-white/10 px-6 py-3 text-sm font-semibold text-black dark:text-white transition hover:border-emerald-300 hover:text-emerald-200"
               >
                 Start Free
               </Link>
             </div>
 
             <div className="grid gap-4 sm:grid-cols-3">
-              <div className="rounded-3xl bg-white/5 px-5 py-4">
-                <p className="text-3xl font-semibold text-white">120+</p>
-                <p className="mt-2 text-sm text-slate-400">Trusted hosts</p>
+              <div className="rounded-3xl bg-gray-100 dark:bg-white/5 px-5 py-4">
+                <p className="text-3xl font-semibold text-black dark:text-white">120+</p>
+                <p className="mt-2 text-sm text-gray-500 dark:text-slate-400">Trusted hosts</p>
               </div>
-              <div className="rounded-3xl bg-white/5 px-5 py-4">
-                <p className="text-3xl font-semibold text-white">24/7</p>
-                <p className="mt-2 text-sm text-slate-400">Friendly support</p>
+              <div className="rounded-3xl bg-gray-100 dark:bg-white/5 px-5 py-4">
+                <p className="text-3xl font-semibold text-black dark:text-white">24/7</p>
+                <p className="mt-2 text-sm text-gray-500 dark:text-slate-400">Friendly support</p>
               </div>
-              <div className="rounded-3xl bg-white/5 px-5 py-4">
-                <p className="text-3xl font-semibold text-white">4.9/5</p>
-                <p className="mt-2 text-sm text-slate-400">Guest satisfaction</p>
+              <div className="rounded-3xl bg-gray-100 dark:bg-white/5 px-5 py-4">
+                <p className="text-3xl font-semibold text-black dark:text-white">4.9/5</p>
+                <p className="mt-2 text-sm text-gray-500 dark:text-slate-400">Guest satisfaction</p>
               </div>
             </div>
           </div>
@@ -79,13 +79,13 @@ export default function Home() {
 
         <section className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <motion.div className="space-y-6" {...slideFromLeft}>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
               Discover Your Perfect Home
             </h2>
-            <p className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+            <p className="max-w-xl text-base leading-8 text-gray-600 dark:text-slate-300 sm:text-lg">
               Browse through our curated collection of homes. From cozy apartments to spacious houses, find the ideal place that fits your lifestyle and budget with just a few clicks.
             </p>
-            <ul className="space-y-3 text-slate-300">
+            <ul className="space-y-3 text-gray-600 dark:text-slate-300">
               <li className="flex items-center gap-3">
                 <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
                 <span>Verified listings with detailed photos and descriptions</span>
@@ -118,13 +118,13 @@ export default function Home() {
             />
           </motion.div>
           <motion.div className="space-y-6 order-1 lg:order-2" {...slideFromRight}>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
               Escape to Scenic Lodges
             </h2>
-            <p className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+            <p className="max-w-xl text-base leading-8 text-gray-600 dark:text-slate-300 sm:text-lg">
               Experience nature's beauty in our handpicked lodges. Perfect for weekend getaways or extended stays, with all the comforts of home surrounded by stunning landscapes.
             </p>
-            <ul className="space-y-3 text-slate-300">
+            <ul className="space-y-3 text-gray-600 dark:text-slate-300">
               <li className="flex items-center gap-3">
                 <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
                 <span>Secluded locations with breathtaking views</span>
@@ -143,13 +143,13 @@ export default function Home() {
 
         <section className="grid items-center gap-12 lg:grid-cols-[0.9fr_1.1fr] lg:gap-16">
           <motion.div className="space-y-6" {...slideFromLeft}>
-            <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
               Luxury Hotel Experiences
             </h2>
-            <p className="max-w-xl text-base leading-8 text-slate-300 sm:text-lg">
+            <p className="max-w-xl text-base leading-8 text-gray-600 dark:text-slate-300 sm:text-lg">
               Indulge in world-class hospitality at our partner hotels. Whether for business or leisure, enjoy premium services and exceptional comfort in prime locations.
             </p>
-            <ul className="space-y-3 text-slate-300">
+            <ul className="space-y-3 text-gray-600 dark:text-slate-300">
               <li className="flex items-center gap-3">
                 <div className="h-2 w-2 rounded-full bg-emerald-400"></div>
                 <span>High-end amenities and concierge services</span>
@@ -173,11 +173,11 @@ export default function Home() {
           </motion.div>
         </section>
 
-        <motion.section className="rounded-3xl bg-white/5 px-8 py-12 text-center sm:px-12" {...fadeInUp}>
-          <h2 className="text-3xl font-bold tracking-tight text-white sm:text-4xl">
+        <motion.section className="rounded-3xl bg-gray-100 dark:bg-white/5 px-8 py-12 text-center" {...fadeInUp}>
+          <h2 className="text-3xl font-bold tracking-tight text-black dark:text-white sm:text-4xl">
             Ready to Find Your Perfect Stay?
           </h2>
-          <p className="mt-4 max-w-2xl mx-auto text-base leading-8 text-slate-300 sm:text-lg">
+          <p className="mt-4 max-w-2xl mx-auto text-base leading-8 text-gray-600 dark:text-slate-300 sm:text-lg">
             Join thousands of satisfied renters who have found their ideal homes, lodges, and hotels through Oomsika. Start your search today and experience the convenience of modern property finding.
           </p>
           <div className="mt-8 flex flex-wrap justify-center gap-4">
@@ -197,8 +197,8 @@ export default function Home() {
         </motion.section>
       </main>
 
-      <footer className="bg-slate-950 border-t border-white/10 py-8 text-center">
-        <p className="text-slate-400">&copy; 2024 Oomsika. All rights reserved.</p>
+      <footer className="bg-gray-100 dark:bg-slate-950 border-t border-gray-300 dark:border-white/10 py-8 text-center">
+        <p className="text-gray-500 dark:text-slate-400">&copy; 2024 Oomsika. All rights reserved.</p>
       </footer>
     </div>
   );
